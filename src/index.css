@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.my-container {
+    @apply max-w-7xl mx-auto px-5
+}
+
+.my-btn{
+    @apply bg-[#D2B48C] text-[#3b2b2b] py-3 px-6 border border-[#3b2b2b]
+}
