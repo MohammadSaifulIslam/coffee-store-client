@@ -6,16 +6,16 @@ const AddCoffee = () => {
 
         const name = form.name.value;
         const chef = form.chef.value;
-        const supplier = form.supplier.value;
-        const taste = form.taste.value;
+        const quantity = form.quantity.value;
+        const price = form.price.value;
         const category = form.category.value;
         const details = form.details.value;
         const photo = form.photo.value;
         const newCoffee = {
             name,
             chef,
-            supplier,
-            taste,
+            quantity,
+            price,
             category,
             details,
             photo
@@ -68,18 +68,18 @@ const AddCoffee = () => {
                 <div className="flex gap-5 mt-6">
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Supplier</span>
+                            <span className="label-text">Quantity</span>
                         </label>
                         <label className="">
-                            <input type="text" name="supplier" placeholder="Enter coffee supplier" className="input input-bordered w-full" />
+                            <input type="text" name="quantity" placeholder="Enter coffee quantity" className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Taste</span>
+                            <span className="label-text">Price</span>
                         </label>
                         <label className="">
-                            <input type="text" name="taste" placeholder="Enter coffee taste" className="input input-bordered w-full" />
+                            <input type="text" name="price" placeholder="Enter coffee price" className="input input-bordered w-full" />
                         </label>
                     </div>
                 </div>
