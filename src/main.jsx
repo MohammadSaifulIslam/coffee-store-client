@@ -9,6 +9,7 @@ import Main from './Layouts/Main.jsx';
 import Home from './components/Home.jsx';
 import AddCoffee from './components/AddCoffee';
 import UpdateCoffee from './components/UpdateCoffee';
+import ViewCoffee from './components/ViewCoffee';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
       {
         path : 'update_coffee/:id',
         element: <UpdateCoffee></UpdateCoffee>,
+        loader: ({params})=> fetch(`http://localhost:5000/coffee/${params.id}`)
+      },
+      {
+        path : 'view_coffee/:id',
+        element: <ViewCoffee></ViewCoffee>,
         loader: ({params})=> fetch(`http://localhost:5000/coffee/${params.id}`)
       },
     ]

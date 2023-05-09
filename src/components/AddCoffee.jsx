@@ -1,3 +1,5 @@
+import { ArrowLeftIcon } from '@heroicons/react/24/solid';
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
 const AddCoffee = () => {
     const handleAddCoffee = event =>{
@@ -41,9 +43,11 @@ const AddCoffee = () => {
         })
     }
     return (
-        <div className="my-container bg-[#F4F3F0] py-16 px-28 mt-12">
-            <div className="section-title">
-                <h1>Add New Coffee</h1>
+        <div className="my-container my-10"> 
+           <Link to='/'><button className="ml-5 text-3xl flex gap-2 items-center text-[#3b2b2b]" style={{fontFamily: ['Rancho',' cursive']}}><ArrowLeftIcon className="h-6 w-6" /> Back to Home</button></Link>                  
+            <div className=' bg-[#F4F3F0] py-16 px-28 mt-10'>
+            <div className="section-title  md:w-2/3 text-center mx-auto">
+                <h1 className='text-3xl font-bold mb-5 text-[#3b2b2b]'>Add New Coffee</h1>
                 <p>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
             </div>
             <form onSubmit={handleAddCoffee}>
@@ -113,6 +117,7 @@ const AddCoffee = () => {
                 </div>
                 <button type="submit" className="my-btn w-full mt-6">Add Coffee</button>
             </form>
+            </div>
         </div>
     );
 };
